@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import NavBar from './components/NavBar';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-     <h1> AI simm </h1>
-    </div>
+    <Router>
+      <NavBar />
+    </Router>
   );
 }
 
