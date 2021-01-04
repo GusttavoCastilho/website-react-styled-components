@@ -1,7 +1,8 @@
-import styled, { keyframes  } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
 import { Link as LinkR } from 'react-router-dom';
 
-export const SigninContainer = styled.div`
+export const SignupContainer = styled.div`
     width: 100%;
     min-height: 100vh;
     background:
@@ -27,9 +28,9 @@ export const appearFromLeft = keyframes`
   }
 `;
 
-export const SigninWrapper = styled.div`
+export const SignupWrapper = styled.div`
     width: 500px;
-    height: 500px;
+    height: 330px;
 
     background-color: #fefefe;
 

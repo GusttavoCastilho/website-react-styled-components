@@ -1,10 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
+export const appearFromTop = keyframes`
+   from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 export const Nav = styled.nav`
-    background-color: ${({scrolNav}) => (scrolNav ? "#000" : "transparent")};
+    background-color: ${({scrolNav}) => (scrolNav ? "#000" : '#000')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -28,6 +39,8 @@ export const NavbarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
+
+    animation: ${appearFromTop} 1s;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -75,7 +88,7 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(LinkS)`
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -103,7 +116,7 @@ export const NavBtnLink = styled(LinkR)`
     white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
-    font-size: 1.2rem;
+    font-size: 1rem;
     outline: none;
     border: none;
     cursor: pointer;
